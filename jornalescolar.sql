@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2020 at 01:58 PM
+-- Generation Time: Oct 23, 2020 at 03:49 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `jornalescolar`
 --
+CREATE DATABASE IF NOT EXISTS `jornalescolar` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `jornalescolar`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `ano`
 --
 
+DROP TABLE IF EXISTS `ano`;
 CREATE TABLE `ano` (
   `ano` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -104,6 +107,7 @@ INSERT INTO `ano` (`ano`) VALUES
 -- Table structure for table `categoria`
 --
 
+DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE `categoria` (
   `idCategoria` int(11) NOT NULL,
   `categoria` varchar(255) DEFAULT NULL
@@ -142,6 +146,7 @@ INSERT INTO `categoria` (`idCategoria`, `categoria`) VALUES
 -- Table structure for table `dia`
 --
 
+DROP TABLE IF EXISTS `dia`;
 CREATE TABLE `dia` (
   `dia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -189,6 +194,7 @@ INSERT INTO `dia` (`dia`) VALUES
 -- Table structure for table `materia`
 --
 
+DROP TABLE IF EXISTS `materia`;
 CREATE TABLE `materia` (
   `idMateria` int(11) NOT NULL,
   `titulo` varchar(255) DEFAULT NULL,
@@ -223,6 +229,7 @@ INSERT INTO `materia` (`idMateria`, `titulo`, `materia`, `idRedator`, `idCategor
 -- Table structure for table `mes`
 --
 
+DROP TABLE IF EXISTS `mes`;
 CREATE TABLE `mes` (
   `mes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -251,6 +258,7 @@ INSERT INTO `mes` (`mes`) VALUES
 -- Table structure for table `redator`
 --
 
+DROP TABLE IF EXISTS `redator`;
 CREATE TABLE `redator` (
   `idRedator` int(11) NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
@@ -282,6 +290,7 @@ INSERT INTO `redator` (`idRedator`, `nome`, `sobrenome`, `email`, `DDD`, `telefo
 -- Table structure for table `turma`
 --
 
+DROP TABLE IF EXISTS `turma`;
 CREATE TABLE `turma` (
   `idTurma` int(11) NOT NULL,
   `turma` varchar(255) DEFAULT NULL
